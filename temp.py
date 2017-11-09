@@ -37,9 +37,9 @@ def temp_on(current_temperature, previous_temperature, req_temp):
         print "Turn cool on"
     else :
         print "Do not touch"
-             
+                
 while 1:
-    previous_temperature = int(ser.readline())
+    previous_temperature = int(ser.readline())    
     current_temperature = int(ser.readline())
     current_time = datetime.datetime.now()
     #에어컨의 희망 온도 받아오기
@@ -58,5 +58,5 @@ while 1:
     print r.text
 
     previous_temperature = current_temperature
-    time.sleep(2)
+    time.sleep(2.5)
     
