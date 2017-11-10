@@ -14,8 +14,6 @@ import serial
 ser = serial.Serial('/dev/ttyACM3', 9600, timeout=2)
 ser.open
 
-previous_temperature = int(ser.readline())
-
 while True:
     print "loop start"
     current_temperature = int(ser.readline(), base=10)
